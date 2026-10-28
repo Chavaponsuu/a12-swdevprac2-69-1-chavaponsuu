@@ -19,6 +19,11 @@ interface VenueItem {
     data: VenueItem[]
   }
 
+  interface VenueDetailJson {
+    success: boolean;
+    data: VenueItem;
+  }
+
   interface BookingItem {
     nameLastname: string;
     tel: string;
