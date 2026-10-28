@@ -1,0 +1,73 @@
+.list {
+  display: grid;
+  gap: 24px;
+  padding: 0;
+  list-style: none;
+}
+
+.card,
+.empty {
+  padding: 32px;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  background: var(--color-surface);
+  box-shadow: 0 8px 24px rgb(15 23 42 / 5%);
+}
+
+.card h2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 12px 24px;
+  margin: 24px 0;
+  font-size: 14px;
+}
+
+.details dt {
+  font-weight: 600;
+}
+
+.details dd {
+  overflow-wrap: anywhere;
+}
+
+.cancelButton {
+  padding: 10px 16px;
+  border: 1px solid var(--color-error);
+  border-radius: 8px;
+  background: var(--color-surface);
+  color: var(--color-error);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cancelButton:hover {
+  background: color-mix(in srgb, var(--color-error) 6%, var(--color-surface));
+}
+
+.empty {
+  text-align: center;
+}
+
+.bookingLink {
+  display: inline-block;
+  margin-top: 16px;
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .card,
+  .empty {
+    padding: 24px;
+  }
+
+  .details {
+    gap: 12px;
+  }
+}
